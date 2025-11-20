@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Google Antigravity",
+  title: "Lupleg Antimotion",
   description: "Modern web experiences with cutting-edge technology",
 };
 

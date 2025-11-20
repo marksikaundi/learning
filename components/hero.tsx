@@ -91,18 +91,18 @@ export function Hero() {
             </defs>
           </svg>
           <span className="text-xl text-[#202124]">
-            <span className="font-medium">Google</span>{" "}
-            <span className="font-normal text-[#5f6368]">Antigravity</span>
+            <span className="font-medium">Lupleg</span>{" "}
+            <span className="font-normal text-[#5f6368]">Antimotion</span>
           </span>
         </div>
 
         {/* Headlines */}
         <div className="space-y-2">
           <h1 className="text-5xl font-medium tracking-tight text-[#202124] sm:text-6xl md:text-7xl">
-            Experience liftoff
+            Experience antimotion
           </h1>
           <h2 className="text-4xl font-normal tracking-tight text-[#5f6368] sm:text-5xl md:text-6xl">
-            with the next-generation IDE
+            with the next-generation learning platform
           </h2>
         </div>
 

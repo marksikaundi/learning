@@ -101,8 +101,8 @@ export function Header() {
                 </defs>
               </svg>
               <span className="text-xl text-[#202124]">
-                <span className="font-medium">Google</span>{" "}
-                <span className="font-normal text-[#5f6368]">Antigravity</span>
+                <span className="font-medium">Lupleg</span>{" "}
+                <span className="font-normal text-[#5f6368]">Antimotion</span>
               </span>
             </div>
           </Link>

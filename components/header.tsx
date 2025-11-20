@@ -110,13 +110,16 @@ export function Header() {
           {/* Navigation */}
           <NavigationMenu className="hidden md:flex">
             <NavigationMenuList className="gap-1">
-              <NavigationMenuItem>
-                <Link href="/product" legacyBehavior passHref>
-                  <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-[15px] font-medium text-[#5f6368] transition-colors hover:text-[#202124] focus:text-[#202124] focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
-                    Product
-                  </NavigationMenuLink>
+            <NavigationMenuItem>
+              <NavigationMenuLink asChild>
+                <Link
+                  href="/product"
+                  className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-[15px] font-medium text-[#5f6368] transition-colors hover:text-[#202124] focus:text-[#202124] focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
+                >
+                  Product
                 </Link>
-              </NavigationMenuItem>
+              </NavigationMenuLink>
+            </NavigationMenuItem>
 
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="bg-transparent text-[15px] font-medium text-[#5f6368] hover:text-[#202124] focus:text-[#202124] data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
@@ -137,21 +140,27 @@ export function Header() {
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
-              <NavigationMenuItem>
-                <Link href="/pricing" legacyBehavior passHref>
-                  <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-[15px] font-medium text-[#5f6368] transition-colors hover:text-[#202124] focus:text-[#202124] focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
-                    Pricing
-                  </NavigationMenuLink>
+            <NavigationMenuItem>
+              <NavigationMenuLink asChild>
+                <Link
+                  href="/pricing"
+                  className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-[15px] font-medium text-[#5f6368] transition-colors hover:text-[#202124] focus:text-[#202124] focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
+                >
+                  Pricing
                 </Link>
-              </NavigationMenuItem>
+              </NavigationMenuLink>
+            </NavigationMenuItem>
 
-              <NavigationMenuItem>
-                <Link href="/blog" legacyBehavior passHref>
-                  <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-[15px] font-medium text-[#5f6368] transition-colors hover:text-[#202124] focus:text-[#202124] focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
-                    Blog
-                  </NavigationMenuLink>
+            <NavigationMenuItem>
+              <NavigationMenuLink asChild>
+                <Link
+                  href="/blog"
+                  className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-[15px] font-medium text-[#5f6368] transition-colors hover:text-[#202124] focus:text-[#202124] focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
+                >
+                  Blog
                 </Link>
-              </NavigationMenuItem>
+              </NavigationMenuLink>
+            </NavigationMenuItem>
 
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="bg-transparent text-[15px] font-medium text-[#5f6368] hover:text-[#202124] focus:text-[#202124] data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">

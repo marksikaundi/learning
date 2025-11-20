@@ -3,7 +3,7 @@ import { ArrowRight, Sparkles, Zap, Shield } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex flex-col">
       {/* Hero Section */}
       <section className="container flex flex-col items-center justify-center space-y-8 py-24 text-center md:py-32">
         <div className="inline-flex items-center rounded-full border border-border bg-muted px-4 py-1.5 text-sm">

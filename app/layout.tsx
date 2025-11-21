@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Lupleg Antimotion",
-  description: "Modern web experiences with cutting-edge technology",
+  description: "Learn to move with the next-generation learning platform",
 };
 
 export default function RootLayout({

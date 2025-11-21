@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { Download } from "lucide-react";
+import { Download, ChevronRight, Share2, Code, Layers } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -13,6 +13,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
+import { PRODUCTS } from "@/lib/constants";
 
 const useCases = [
   {
@@ -101,8 +102,8 @@ export function Header() {
                 </defs>
               </svg>
               <span className="text-xl text-[#202124]">
-                <span className="font-medium">Lupleg</span>{" "}
-                <span className="font-normal text-[#5f6368]">Antimotion</span>
+                <span className="font-medium">Google</span>{" "}
+                <span className="font-normal text-[#5f6368]">Antigravity</span>
               </span>
             </div>
           </Link>
@@ -110,57 +111,126 @@ export function Header() {
           {/* Navigation */}
           <NavigationMenu className="hidden md:flex">
             <NavigationMenuList className="gap-1">
-            <NavigationMenuItem>
-              <NavigationMenuLink asChild>
-                <Link
-                  href="/product"
-                  className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-[15px] font-medium text-[#5f6368] transition-colors hover:text-[#202124] focus:text-[#202124] focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
-                >
-                  Product
-                </Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-
+              {/* Products Dropdown (formerly Product Link) */}
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="bg-transparent text-[15px] font-medium text-[#5f6368] hover:text-[#202124] focus:text-[#202124] data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
-                  Use Cases
+                  Products
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                    {useCases.map((item) => (
+                  <ul className="grid w-[500px] gap-3 p-4 md:w-[600px] md:grid-cols-2">
+                    {PRODUCTS.map((product) => (
                       <ListItem
-                        key={item.title}
-                        title={item.title}
-                        href={item.href}
+                        key={product.id}
+                        title={product.name}
+                        href={product.href}
                       >
-                        {item.description}
+                        {product.description}
                       </ListItem>
                     ))}
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
-            <NavigationMenuItem>
-              <NavigationMenuLink asChild>
-                <Link
-                  href="/pricing"
-                  className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-[15px] font-medium text-[#5f6368] transition-colors hover:text-[#202124] focus:text-[#202124] focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
-                >
-                  Pricing
-                </Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="bg-transparent text-[15px] font-medium text-[#5f6368] hover:text-[#202124] focus:text-[#202124] data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
+                  Use Cases
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="grid w-[800px] grid-cols-[1.2fr_1fr] gap-0 bg-white p-0">
+                    {/* Left Side */}
+                    <div className="flex flex-col justify-between p-8">
+                      <div className="space-y-4">
+                        <h3 className="text-2xl font-normal leading-tight text-[#202124]">
+                          Intuitive for every type of
+                          <br />
+                          builder
+                        </h3>
+                        <p className="text-[15px] leading-relaxed text-[#5f6368]">
+                          Explore how Google Antigravity helps you build
+                        </p>
+                      </div>
+                      <div className="mt-8">
+                        <Button
+                          variant="secondary"
+                          className="h-10 rounded-full bg-[#f1f3f4] px-6 text-[14px] font-medium text-[#202124] hover:bg-[#e8eaed]"
+                        >
+                          See overview
+                        </Button>
+                      </div>
+                    </div>
 
-            <NavigationMenuItem>
-              <NavigationMenuLink asChild>
-                <Link
-                  href="/blog"
-                  className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-[15px] font-medium text-[#5f6368] transition-colors hover:text-[#202124] focus:text-[#202124] focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
-                >
-                  Blog
-                </Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
+                    {/* Right Side */}
+                    <div className="flex flex-col justify-center p-8">
+                      <ul className="space-y-2">
+                        <li>
+                          <NavigationMenuLink asChild>
+                            <a
+                              className="group flex items-center justify-between rounded-lg px-4 py-3 text-[15px] font-medium text-[#202124] hover:bg-[#f8f9fa]"
+                              href="#"
+                            >
+                              <div className="flex items-center gap-3">
+                                <Share2 className="h-5 w-5 text-[#5f6368]" />
+                                Professional
+                              </div>
+                              <ChevronRight className="h-4 w-4 text-[#5f6368] opacity-0 transition-opacity group-hover:opacity-100" />
+                            </a>
+                          </NavigationMenuLink>
+                        </li>
+                        <li>
+                          <NavigationMenuLink asChild>
+                            <a
+                              className="group flex items-center justify-between rounded-lg px-4 py-3 text-[15px] font-medium text-[#202124] hover:bg-[#f8f9fa]"
+                              href="#"
+                            >
+                              <div className="flex items-center gap-3">
+                                <Code className="h-5 w-5 text-[#5f6368]" />
+                                Frontend
+                              </div>
+                              <ChevronRight className="h-4 w-4 text-[#5f6368] opacity-0 transition-opacity group-hover:opacity-100" />
+                            </a>
+                          </NavigationMenuLink>
+                        </li>
+                        <li>
+                          <NavigationMenuLink asChild>
+                            <a
+                              className="group flex items-center justify-between rounded-lg px-4 py-3 text-[15px] font-medium text-[#202124] hover:bg-[#f8f9fa]"
+                              href="#"
+                            >
+                              <div className="flex items-center gap-3">
+                                <Layers className="h-5 w-5 text-[#5f6368]" />
+                                Fullstack
+                              </div>
+                              <ChevronRight className="h-4 w-4 text-[#5f6368] opacity-0 transition-opacity group-hover:opacity-100" />
+                            </a>
+                          </NavigationMenuLink>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuLink asChild>
+                  <Link
+                    href="/pricing"
+                    className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-[15px] font-medium text-[#5f6368] transition-colors hover:text-[#202124] focus:text-[#202124] focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
+                  >
+                    Pricing
+                  </Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuLink asChild>
+                  <Link
+                    href="/blog"
+                    className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-[15px] font-medium text-[#5f6368] transition-colors hover:text-[#202124] focus:text-[#202124] focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
+                  >
+                    Blog
+                  </Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
 
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="bg-transparent text-[15px] font-medium text-[#5f6368] hover:text-[#202124] focus:text-[#202124] data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">

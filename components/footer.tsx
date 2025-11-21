@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { PRODUCTS } from "@/lib/constants";
 
 export function Footer() {
   return (
@@ -15,14 +16,16 @@ export function Footer() {
             <div className="flex flex-col space-y-4">
               <h3 className="font-medium">Product</h3>
               <ul className="flex flex-col space-y-3 text-sm text-muted-foreground">
+                {PRODUCTS.map((product) => (
+                  <li key={product.id}>
+                    <Link href={product.href} className="hover:text-foreground transition-colors">
+                      {product.name}
+                    </Link>
+                  </li>
+                ))}
                 <li>
                   <Link href="/download" className="hover:text-foreground transition-colors">
                     Download
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/product" className="hover:text-foreground transition-colors">
-                    Product
                   </Link>
                 </li>
                 <li>
@@ -65,7 +68,7 @@ export function Footer() {
         {/* Middle Section: Giant Text */}
         <div className="my-24 text-center md:my-32">
           <h1 className="select-none text-[12vw] font-bold leading-none tracking-tight text-foreground">
-            Antimotion
+            Antigravity
           </h1>
         </div>
 
@@ -75,7 +78,7 @@ export function Footer() {
             href="/" 
             className="text-[22px] font-medium text-[#5f6368] hover:opacity-80 transition-opacity dark:text-[#9aa0a6]"
           >
-            Lupleg
+            Google
           </Link>
 
           <nav className="flex flex-wrap justify-center gap-6 md:gap-8">
@@ -83,13 +86,13 @@ export function Footer() {
               href="/about"
               className="text-[14px] text-[#5f6368] hover:text-[#1a73e8] transition-colors dark:text-[#9aa0a6] dark:hover:text-[#8ab4f8]"
             >
-              About Lupleg
+              About Google
             </Link>
             <Link
               href="/products"
               className="text-[14px] text-[#5f6368] hover:text-[#1a73e8] transition-colors dark:text-[#9aa0a6] dark:hover:text-[#8ab4f8]"
             >
-              Lupleg Products
+              Google Products
             </Link>
             <Link
               href="/privacy"

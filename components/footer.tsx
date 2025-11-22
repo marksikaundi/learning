@@ -72,13 +72,13 @@ export function Footer() {
           </h1>
         </div>
 
-        {/* Bottom Section: Google Logo and Legal Links */}
+        {/* Bottom Section: Lupleg Logo and Legal Links */}
         <div className="flex flex-col items-center justify-between gap-6 border-t-0 pt-0 md:flex-row">
           <Link 
             href="/" 
             className="text-[22px] font-medium text-[#5f6368] hover:opacity-80 transition-opacity dark:text-[#9aa0a6]"
           >
-            Google
+            Lupleg
           </Link>
 
           <nav className="flex flex-wrap justify-center gap-6 md:gap-8">
@@ -86,13 +86,13 @@ export function Footer() {
               href="/about"
               className="text-[14px] text-[#5f6368] hover:text-[#1a73e8] transition-colors dark:text-[#9aa0a6] dark:hover:text-[#8ab4f8]"
             >
-              About Google
+              About Lupleg
             </Link>
             <Link
               href="/products"
               className="text-[14px] text-[#5f6368] hover:text-[#1a73e8] transition-colors dark:text-[#9aa0a6] dark:hover:text-[#8ab4f8]"
             >
-              Google Products
+              Lupleg Products
             </Link>
             <Link
               href="/privacy"
